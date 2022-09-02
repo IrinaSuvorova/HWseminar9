@@ -1,0 +1,14 @@
+{
+    //Задача 64: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа кратные 3-ём в промежутке от M до N.
+
+    int m = 1;
+    int n = 9;
+    Recursion(m,n);
+    void Recursion(int leftBorder, int rightBorder)
+    {
+        if (leftBorder > rightBorder) return;
+        if (leftBorder % 3 == 0) Console.WriteLine(leftBorder);
+        leftBorder++;
+        Recursion(leftBorder, rightBorder);
+    }
+}
