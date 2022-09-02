@@ -1,0 +1,17 @@
+{
+    //Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N
+    int m = 1;
+    int n = 15;
+    Recursion(m,n);
+    void Recursion(int leftBorder, int rightBorder, int sum = 0)
+    {
+        if (leftBorder > rightBorder)
+        {
+            Console.WriteLine(sum);
+            return;
+        } 
+        sum += leftBorder;
+        leftBorder++;
+        Recursion(leftBorder, rightBorder, sum);
+    }
+}
